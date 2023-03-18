@@ -20,12 +20,12 @@ public class RecursionMath {
     //       you can't divide anymore
     public static int recursiveDivision(int number, int numberToDivideBy) {
             	
-    	if(numberToDivideBy == number - numberToDivideBy) {
+    	if(numberToDivideBy > number) {
     		return number;
     	}
     	
     	else {
-    		return recursiveDivision(number, numberToDivideBy);
+    		return number - recursiveDivision(number-numberToDivideBy, numberToDivideBy);
     	}
     }
 
